@@ -1,0 +1,111 @@
+
+
+.table_division{
+	padding-top: 10px;
+	background-color:mediumturquoise;
+}
+
+
+.node_datatable {
+	width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+.node_table_head {
+    background-color:lightseagreen;
+    color: #fff;
+}
+
+.node_datatable th,.node_datatable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.dataTables_wrapper .top {
+  margin-bottom: 1px;
+  margin-right:60px;
+  
+
+}
+
+.dataTables_wrapper .top .dataTables_filter input {
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+
+  
+}
+
+
+
+
+.shelf_datatable {
+	width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+.shelf_table_head {
+    background-color:lightseagreen;
+    color: #fff;
+}
+
+.shelf_datatable th,.shelf_datatable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.card_datatable {
+	width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+.card_table_head {
+    background-color:lightseagreen;
+    color: #fff;
+}
+
+.card_datatable th,.card_datatable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+
+.port_datatable {
+	width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+.port_table_head {
+    background-color:lightseagreen;
+    color: #fff;
+}
+
+.port_datatable th,.port_datatable td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}

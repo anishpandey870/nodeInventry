@@ -1,0 +1,138 @@
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .navbar {
+	height: 90px;;
+  overflow: hidden;
+  margin-bottom: -10px;
+  color:black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.navbar h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+.logo-container img {
+  height: 100px;
+  
+   
+}
+
+
+  /* Control the left side */
+  .left {
+    left: 0;
+    
+	background-image: url('/vcti logo - Copy.jpg');
+
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-position-y: center;
+    
+    background-size: 450px;
+    
+  }
+
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color:lightseagreen;
+   
+    
+  }
+
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+   
+    
+}
+.image{
+  padding: 5px;
+  width: 200px;
+
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color:black;
+    position: relative;
+    text-align: center;
+}
+label{
+color:black;
+font-size: 17px;
+}
+#Uname{
+width: 300px;
+height: 30px;
+border: none;
+border-radius: 5px;
+border-color:darkgrey;
+padding-left: 8px;
+margin-left:28px;
+
+
+}
+#Pass{
+width: 300px;
+height: 30px;
+border: none;
+border-color:darkgrey;
+border-radius: 5px;
+padding-left: 8px;
+margin-left:35px;
+
+}
+#log{
+width: 150px;
+height: 30px;
+border: none;
+border-radius: 17px;
+padding-left: 7px;
+background-color:black;
+color:white;
+margin-left:30px;
+margin-top:10px;
+
+
+}
+span{
+color:darkgrey;
+font-size: 17px;
+}
+a{
+float: right;
+color:black;
+
+}

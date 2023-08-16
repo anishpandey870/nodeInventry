@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		 <link rel="stylesheet" href="css/home1.css">
+		 <link rel="stylesheet" href="css/node.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com//ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		 <title>
+		HomePage
+	</title>
+	</head>
+	<body class="shelf_body">
+		<div>
+				<nav class="navbar">
+				<div class="logo-container">
+    				<img src="vcti logo.jpg" alt="Logo" >
+   						 <span><h2>Inventory</h2></span>
+  				</div>
+  			
+				<div class="nav-right">
+					<a href="/">logout</a>
+					<i class="fa fa-user"></i> 
+					<a1 class="active" href="#User">
+						<i><h1 th:text="${User}"></i>
+						 </h1><span class="user">
+</span>
+						
+			
+						 </a1>
+						 
+						 
+						  
+				</div>
+			</nav>
+		</div>
+		
+<div>
+			
+			
+			<form th:action="@{/node}" method="get">
+				<table class="input-form">
+					<div>
+					<tr>
+						<td >Name:</td>
+						<td><input type="text" class="form-control" name="Name" id="Name" placeholder="Enter Name" ></td>
+						<td>Network:</td>
+						<td><input type="text" class="form-control" name="NetworkName" id="NetworkName" placeholder="Enter Network"></td> 
+						<td><button class="btn btn-primary" type="submit" style="background: #20B2AA;padding: 5px;width: 100px;border-radius: 15px;">Submit</button></td>
+					</tr>
+					
+					<tr>
+						<td>IP Address:</td>
+						<td><input type="text" class="form-control" name="IpAddress"  placeholder="Enter IP address"></td>
+						<td>EMS Id:</td>
+						<td><input type="text" name="EmsId" id="emsid" placeholder="Enter EMS ID"></td>
+						<td><button type="reset" class="btn btn-danger" style="background: #20B2AA;padding: 5px;width: 100px;border-radius: 15px;"fs>Clear</button></td>
+						 
+					</tr>
+					
+					</div>
+				</table>
+				
+			</form>
+		</div>
+		
+			<div class="table_division">
+			<table class="node_datatable">
+				<thead class="node_table_head">
+					<tr>
+						<th>Id</th>
+						<th>CLLI</th>
+						<th>Device Type</th>
+						<th>Name</th>
+						<th>IP Address 1</th>
+						<th>IP Address 2</th>
+						<th>EMS Id</th>
+						<th>Network Name</th>
+						<th>Created time</th>
+						<th>State</th>
+						<th>Reference Id</th>
+						<th>Details</th>
+						
+					</tr>
+				</thead>
+				
+				<tbody>
+					
+            <tr class="get_shelfs" th:each="node : ${nodes}">
+				<td th:text="${node.ID}" />
+                <td th:text="${node.CLLI}" />
+                <td th:text="${node.DEVICETYPE}" />
+                <td th:text="${node.NAME}" />
+                <td th:text="${node.IPADDRESS1}" />
+                <td th:text="${node.IPADDRESS2}" />
+                <td th:text="${node.EMSID}" />
+                <td th:text="${node.NETWORKNAME}" />
+                <td th:text="${node.CREATEDTIME}" />
+                <td th:text="${node.STATE}" />
+                <td th:text="${node.REFERENCEID}" />
+ 
+                <td><a th:href="@{/NodeInventory(RowId=${node.ID})}" class="btn btn-primary"><i class="fa fa-folder-o" 
+                style="font-size:15px;color:black"></i></a></td>
+                
+            </tr>
+        </tbody>
+			</table>
+		</div>
+		
+		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script>
+    $(function () {
+		
+        $('.node_datatable').DataTable({
+			"language":{
+				"search": "",
+				"searchPlaceholder": "Search..."
+			},
+			
+  			"pageLength": 7,
+  			"lengthMenu": [ 7,10, 15, 20 ],
+  			"dom": '<"top"lf>rt<"bottom"ip><"clear">',
+ 
+  
+
+});
+    });
+</script>
+
+		
+	</body>
+</html>
